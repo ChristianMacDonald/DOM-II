@@ -5,11 +5,15 @@ nav_links.forEach(element => {
         this["style"]["color"] = "lightgray";
     });
     element.addEventListener("mouseout", function (event) {
-        this["style"]["color"] = "";
+        element.removeAttribute("style");
     });
 })
 
-let logo_headings = document.querySelector(".logo-heading");
+let logo_heading = document.querySelector(".logo-heading");
 logo_heading.addEventListener("click", function (event) {
     this["style"]["color"] = "red";
+});
+
+logo_heading.addEventListener("dblclick", function (event) {
+    this["style"]["color"] = "blue";
 });
